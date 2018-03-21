@@ -3,18 +3,23 @@
     padding: 0;
 }
 
+
+
 .slider {
-    width: 100%;
-    height: 100vh;
+    width: 600px;
+    height: 400px;
     overflow: hidden;
     position: relative;
+    background-color: #111;
 }
 
 figure {
-    position: relative;
-    display: none;
+    position: absolute;
+    opacity: 1;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 figure img {
@@ -32,10 +37,6 @@ figure figcaption {
     transform: translate(-50%, -50%);
 }
 
-.active {
-    display: block;
-}
-
 img.next {
     position: absolute;
     right: 0%;
@@ -51,4 +52,5 @@ img.prev {
     top: 50%;
     transform: translate(-50%, -50%) rotate(180deg);
     cursor: pointer;
+    z-index: 10;
 }
