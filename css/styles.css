@@ -1,20 +1,27 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.slider {
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+div.slider {
     width: 100%;
     height: 100vh;
     overflow: hidden;
     position: relative;
+    background-color: #111;
 }
 
 figure {
-    position: relative;
-    display: none;
+    position: absolute;
+    opacity: 1;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 figure img {
@@ -24,7 +31,7 @@ figure img {
 }
 
 figure figcaption {
-    font-size: 80px;
+    font-size: 70px;
     color: white;
     position: absolute;
     top: 50%;
@@ -32,23 +39,21 @@ figure figcaption {
     transform: translate(-50%, -50%);
 }
 
-.active {
-    display: block;
-}
-
-img.next {
+img.next, img.prev {
     position: absolute;
-    right: 0%;
     top: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     z-index: 10;
+    padding: 15px;
+    border: 1px solid white;
+}
+
+img.next {
+    right: 0%;
 }
 
 img.prev {
-    position: absolute;
-    left: 2%;
-    top: 50%;
+    left: 3%;
     transform: translate(-50%, -50%) rotate(180deg);
-    cursor: pointer;
 }
