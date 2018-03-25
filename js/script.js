@@ -11,8 +11,11 @@ $(function() {
             next.addClass('active');
             active.animate({opacity: 0}, 1000).removeClass('active');
         } else {
-            $('figure').animate({opacity: 1}, 1000);
+            //$('figure').animate({opacity: 1}, 1000);
             var next = $('figure').first();
+            next.animate({opacity: 1}, 1000, function() {
+                $('figure').css('opacity', 1);
+            });
             next.addClass('active');
             active.removeClass('active');
         }
