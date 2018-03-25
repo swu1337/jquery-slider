@@ -3,9 +3,11 @@
     padding: 0;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
 
-
-.slider {
+div.slider {
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -37,9 +39,8 @@ figure figcaption {
     transform: translate(-50%, -50%);
 }
 
-img.next {
+img.next, img.prev {
     position: absolute;
-    right: 0%;
     top: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
@@ -48,13 +49,11 @@ img.next {
     border: 1px solid white;
 }
 
+img.next {
+    right: 0%;
+}
+
 img.prev {
-    position: absolute;
     left: 3%;
-    top: 50%;
     transform: translate(-50%, -50%) rotate(180deg);
-    cursor: pointer;
-    z-index: 10;
-    padding: 15px;
-    border: 1px solid white;
 }

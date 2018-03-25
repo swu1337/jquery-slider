@@ -1,6 +1,5 @@
-$(document).ready(function() {
-
-    for (let i = 0; i < $('figure').length; i++) {
+$(function() {
+    for (var i = 0; i < $('figure').length; i++) {
         $('figure').eq(i).css('z-index', $('figure').length - i);
     }
 
@@ -24,10 +23,12 @@ $(document).ready(function() {
         var prev = active.prev();
 
         if(prev.is('figure')) {
-            active.removeClass('active');
             prev.addClass('active').animate({opacity: 1}, 1000);
+            active.removeClass('active');
         } else {
-            $('figure:not(:last)').animate({opacity: 0}, 1000);
+            //$('figure:not(:last)').animate({opacity: 0}, 1000);
+            $('figure:not(:last):not(:first)').css('opacity', 0);
+            active.animate({opacity: 0}, 1000);
             var prev = $('figure').last();
             prev.addClass('active');
             active.removeClass('active');
